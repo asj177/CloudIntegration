@@ -26,6 +26,8 @@ public class UploadFiles {
 			GetDROPBOXConnection getDropBoxConnection = GetDROPBOXConnection
 					.getInstance();
 			DbxClient client = getDropBoxConnection.client;
+			
+			if(client!=null){
 
 			Iterator filesToUpload = filesForDropBox.entrySet().iterator();
 
@@ -48,9 +50,9 @@ public class UploadFiles {
 						System.out.println("Not able to delete");
 					}
 				}
-
+		
 			}
-
+			}
 		} catch (Exception e) {
 
 		}
