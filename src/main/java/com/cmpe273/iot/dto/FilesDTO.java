@@ -22,9 +22,4 @@ public class FilesDTO {
 
         else return 1;
     }
-
-    public Date getTimeStampInfo(){
-        Date dateOfFileFromDrive = new Date(); //need to get the time of file from Mangesh
-        
-    }
 }
