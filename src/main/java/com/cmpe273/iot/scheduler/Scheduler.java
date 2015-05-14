@@ -41,31 +41,7 @@ public class Scheduler {
             
             if(filesFromDropBox.size()>0 && getFilesFromPD.size()>0){
 			uploadFiles.uploadFileService(getFilesFromPD, filesFromDropBox);
-			/*Iterator iterate=getFilesFromPD.entrySet().iterator();
-			
-			while(iterate.hasNext()){
-				
-				Map.Entry pair=(Map.Entry) iterate.next();
-				
-				File f=(File)pair.getKey();
-				String abspath=f.getAbsolutePath().toString();
-				
-				String pathForDrop="";
-				
-				String[]pathTotrime=abspath.split("/");
-				
-				for(int i=4;i<pathTotrime.length;i++){
-					pathForDrop=pathForDrop+"/"+pathTotrime[i];
-				}
-				
-				System.out.println("Absolute path is "+pathForDrop+" cannonical path is "+f.getCanonicalPath());
-			}
-			*/
-			//upload.uploadFiles(path);
-			
-			
-			
-			System.out.println("Pd Detected");
+		        System.out.println("Pd Detected");
             }else{
             	System.out.println("No files in PD to upload");
             }
