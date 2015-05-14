@@ -19,6 +19,7 @@ public class CheckPD {
 		
 		
 		if(directories.length>0){
+			
 			isUSB=true;
 		}
 		
