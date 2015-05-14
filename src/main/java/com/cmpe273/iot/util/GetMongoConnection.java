@@ -2,9 +2,6 @@ package com.cmpe273.iot.util;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
-
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
@@ -15,6 +12,8 @@ import com.mongodb.MongoClientURI;
  *
  */
 public class GetMongoConnection {
+
+
 
 	private static MongoClient connection;
 	private static DB dbConnection;
@@ -27,8 +26,7 @@ public class GetMongoConnection {
 
 		if (dbConnection == null) {
 			
-			MongoClientURI uri = new MongoClientURI(
-					"mongodb://admin:admin@ds061360.mongolab.com:61360/mongo");
+			MongoClientURI uri = new MongoClientURI("mongodb://admin:admin@ds061360.mongolab.com:61360/mongo");
 			connection = new MongoClient(uri);
 			dbConnection = connection.getDB("mongo");
 		}
@@ -37,7 +35,7 @@ public class GetMongoConnection {
 	}
 
 	public static void closeConnection() {
-
+		dbConnection.close();
 	}
 
 }
