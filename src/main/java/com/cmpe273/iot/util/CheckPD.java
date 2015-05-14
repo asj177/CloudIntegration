@@ -3,9 +3,8 @@ package com.cmpe273.iot.util;
 import java.io.File;
 
 /**
- * Get the list of files from the pd and checks the pd
- * and return true if the pd is attached
- * @author Mangesh
+ * 
+ * @author mangesh
  *
  */
 public class CheckPD {
@@ -14,7 +13,7 @@ public class CheckPD {
 	public boolean checkPD(){
 		
 		boolean isUSB=false;
-		File file = new File("/media/arpit");
+		File file = new File("/media/");
 		String[] directories =file.list();
 		
 		
@@ -27,10 +26,10 @@ public class CheckPD {
 	}
 	
 	public String getPath(){
-		File file = new File("/media/arpit");
+		File file = new File("/media/");
 		String[] directories =file.list();
 		
-		String path="/media/arpit/"+directories[0];
+		String path="/media/"+directories[0];
 		return path;
 		
 	}
@@ -38,3 +37,4 @@ public class CheckPD {
 	
 
 }
+
