@@ -26,7 +26,7 @@ public class GetMongoConnection {
 
 		if (dbConnection == null) {
 			
-			MongoClientURI uri = new MongoClientURI("mongodb://admin:admin@ds061360.mongolab.com:61360/mongo");
+			MongoClientURI uri = new MongoClientURI("Mongo URI");
 			connection = new MongoClient(uri);
 			dbConnection = connection.getDB("mongo");
 		}
